@@ -39,7 +39,7 @@ int wmain(int argc, wchar_t* argv[])
 			}
 			else
 			{
-				std::wcout << L"Точка (" << x << L", " << y << (check(x, y) ? L") " : L") не") << L"входит в треугольник с вершинами (0,0);(3,0);(0,4)\n";
+				std::wcout << L"Точка (" << x << L", " << y << (check(x, y) ? L") " : L") не ") << L"входит в треугольник с вершинами (0, 0); (" << M << L", 0); (0, " << N << L")\n";
 			}
 		}	return 0;
 	}
@@ -52,7 +52,7 @@ int wmain(int argc, wchar_t* argv[])
 		}
 		else
 		{
-			std::wcout << (check(x, y) ? L"NO" : L"YES") << '\n';
+			std::wcout << (check(x, y) ? L"YES" : L"NO") << '\n';
 		}
 	}
 	return 0;
