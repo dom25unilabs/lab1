@@ -21,9 +21,9 @@ static inline bool check(double x, double y)
 
 int wmain(int argc, wchar_t* argv[])
 {
-	_setmode(_fileno(stdout), _O_U16TEXT);
-	_setmode(_fileno(stdin), _O_U16TEXT);
-	_setmode(_fileno(stderr), _O_U16TEXT);
+	_setmode(_fileno(stdout), _O_U8TEXT);
+	_setmode(_fileno(stdin), _O_U8TEXT);
+	_setmode(_fileno(stderr), _O_U8TEXT);
 	double x = 1, y = 1;
 	if (argc <= 1 || std::wcsncmp(argv[1], L"false", sizeof(L"false") - 1) != 0)
 	{
@@ -52,7 +52,7 @@ int wmain(int argc, wchar_t* argv[])
 		}
 		else
 		{
-			std::wcout << (check(x, y) ? L"YES" : L"NO") << '\n';
+			std::wcout << (check(x, y) ? "YES" : "NO") << '\n';
 		}
 	}
 	return 0;
