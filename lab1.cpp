@@ -3,9 +3,10 @@
 #include <fcntl.h>
 
 constexpr int M = 3, N = 4;
+constexpr int A = 3, B = 5, C = 4;
 static inline bool check(double x, double y)
 {
-	if (x < 0 || y < 0)
+	/*if (x < 0 || y < 0)
 	{
 		return false;
 	}
@@ -16,7 +17,9 @@ static inline bool check(double x, double y)
 	else
 	{
 		return true;
-	}
+	}*/
+	//return (y >= 0) && (x >= 0) && (M * y <= M * N - N * x);
+	return (y <= A * x) && (y >= A * x - A*C) && (y >= 0) && (y <= B);
 }
 
 int wmain(int argc, wchar_t* argv[])
